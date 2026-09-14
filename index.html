@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Strengths — SMA Children's Support</title>
+<style>
+:root{--ink:#1d2939;--muted:#667085;--brand:#6d5dfc;--brand2:#8b7cff;--soft:#f5f3ff;--card:#fff;--line:#e8eaf0;--good:#168a57;--gold:#f4b740}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#fbfbfd;line-height:1.55}a{text-decoration:none;color:inherit}.container{max-width:1120px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:#fffdfdf2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:20px;color:var(--brand)}.links{display:flex;gap:24px;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer}.primary{background:var(--brand);color:white}.secondary{background:#eeeaff;color:#5143d9}
+.hero{padding:72px 0 54px;background:linear-gradient(135deg,#f1efff,#fff 55%,#fff7ed)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.eyebrow{color:var(--brand);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px}.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.03;margin:14px 0}.hero p{font-size:18px;color:var(--muted);max-width:650px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero-art{min-height:340px;border-radius:30px;background:linear-gradient(160deg,#7b6cff,#b8afff);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.hero-art .bubble{position:absolute;border-radius:50%;background:#fff5;}.bubble.one{width:220px;height:220px;right:-50px;top:-30px}.bubble.two{width:160px;height:160px;left:-35px;bottom:-40px}.heart{font-size:105px;filter:drop-shadow(0 18px 18px #4535b755)}
+section{padding:62px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{margin:0;font-size:34px}.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 28px #1d29390a}.photo{height:205px;background:linear-gradient(135deg,#e8e4ff,#ffdfe7);display:flex;align-items:center;justify-content:center;font-size:72px}.cardbody{padding:20px}.badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.badge{font-size:11px;font-weight:900;padding:5px 8px;border-radius:999px;background:#eeeaff;color:#5143d9}.verified{background:#e5f7ee;color:#147a4d}.card h3{margin:5px 0}.progress{height:9px;background:#eceef3;border-radius:20px;overflow:hidden;margin:10px 0}.progress i{display:block;height:100%;background:var(--brand);border-radius:20px}.money{display:flex;justify-content:space-between;font-size:13px;font-weight:800}.small{font-size:13px;color:var(--muted)}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.info{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}.info h3{margin-top:0}.info ul{padding-left:20px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{padding:22px;border-radius:18px;background:var(--soft);border:1px solid #e6e1ff}.num{width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900}
+.banner{background:#1f2440;color:#fff;border-radius:26px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px}.banner p{color:#d7d9e7}
+.modal{display:none;position:fixed;inset:0;background:#10182899;z-index:30;padding:20px;overflow:auto}.modal.open{display:grid;place-items:center}.modalbox{background:#fff;border-radius:22px;max-width:700px;width:100%;padding:28px;position:relative}.close{position:absolute;right:18px;top:14px;background:#f2f4f7;border:0;border-radius:50%;width:34px;height:34px;font-size:20px}.profile{display:grid;grid-template-columns:150px 1fr;gap:22px}.profile .photo{height:150px;border-radius:18px}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.detail{background:#f8f9fb;border-radius:12px;padding:12px}.transfer{margin-top:20px;padding:18px;border:2px solid #e4defe;background:#f8f6ff;border-radius:16px}.notice{font-size:12px;color:#7a5b00;background:#fff8dc;border:1px solid #f2df9b;padding:12px;border-radius:12px;margin-top:14px}
+footer{padding:40px 0;background:#fff;border-top:1px solid var(--line);color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){.links{display:none}.hero{padding-top:45px}.hero-grid,.cards,.info-grid,.steps{grid-template-columns:1fr}.hero-art{min-height:250px}.section-head{display:block}.section-head .btn{margin-top:14px}.profile{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.banner,.foot{display:block}.banner .btn{margin-top:15px}}
+
+label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}input,select,textarea{width:100%;border:1px solid #dfe3ea;border-radius:11px;padding:11px 12px;font:inherit;background:#fff;margin-bottom:14px}textarea{resize:vertical}
+</style>
+</head>
+<body>
+<nav><div class="container navin"><div class="logo">♥ Little Strengths</div><div class="links"><a href="#children">Children</a><a href="#sma">About SMA</a><a href="#how">How it works</a><a href="#transparency">Safety</a><a href="#request">Request Help</a></div><a class="btn primary" href="#children">Help a Child</a></div></nav>
+
+<header class="hero"><div class="container hero-grid"><div><div class="eyebrow">SMA Children's Support</div><h1>Every little strength deserves a chance.</h1><p>Meet children living with Spinal Muscular Atrophy and help their families with treatment, care and essential medical needs.</p><div class="hero-actions"><a class="btn primary" href="#children">View Children</a><a class="btn secondary" href="#sma">Learn about SMA</a></div></div><div class="hero-art"><div class="bubble one"></div><div class="bubble two"></div><div class="heart">♥</div></div></div></header>
+
+<section id="children"><div class="container"><div class="section-head"><div><div class="eyebrow">Verified fundraising profiles</div><h2>Children who need support</h2><div class="muted">Sample profiles — replace these with consented, verified family information.</div></div></div><div class="cards">
+<div class="card"><div class="photo">👶</div><div class="cardbody"><div class="badges"><span class="badge">SMA Type 1</span><span class="badge verified">✓ Verified</span></div><h3>Aarav Sharma</h3><div class="small">10 months · Hyderabad</div><p class="small">Raising funds for prescribed SMA treatment and supportive care.</p><div class="progress"><i style="width:49%"></i></div><div class="money"><span>₹12.4L raised</span><span>₹25L goal</span></div><button class="btn primary" style="width:100%;margin-top:15px" onclick="openProfile('aarav')">View & Help Aarav</button></div></div>
+<div class="card"><div class="photo">🧒</div><div class="cardbody"><div class="badges"><span class="badge">SMA Type 2</span><span class="badge verified">✓ Verified</span></div><h3>Ananya Reddy</h3><div class="small">3 years · Bengaluru</div><p class="small">Raising funds for treatment, physiotherapy and respiratory support.</p><div class="progress"><i style="width:59%"></i></div><div class="money"><span>₹4.75L raised</span><span>₹8L goal</span></div><button class="btn primary" style="width:100%;margin-top:15px" onclick="openProfile('ananya')">View & Help Ananya</button></div></div>
+<div class="card"><div class="photo">👦</div><div class="cardbody"><div class="badges"><span class="badge">SMA Type 1</span><span class="badge verified">✓ Verified</span></div><h3>Vihaan Kumar</h3><div class="small">14 months · Chennai</div><p class="small">Family support campaign for prescribed treatment and equipment.</p><div class="progress"><i style="width:64%"></i></div><div class="money"><span>₹19.2L raised</span><span>₹30L goal</span></div><button class="btn primary" style="width:100%;margin-top:15px" onclick="openProfile('vihaan')">View & Help Vihaan</button></div></div>
+</div></div></section>
+
+<section id="sma"><div class="container"><div class="section-head"><div><div class="eyebrow">Understand the condition</div><h2>SMA Type 1 & Type 2</h2></div></div><div class="info-grid"><div class="info"><h3>What is SMA?</h3><p class="muted">Spinal Muscular Atrophy (SMA) is a genetic condition that affects motor neurons, leading to progressive muscle weakness. Severity and needs vary from child to child.</p><p class="small">This website is for support and fundraising, not medical diagnosis or treatment advice.</p></div><div class="info"><h3>SMA Type 1</h3><ul><li>Usually begins in infancy.</li><li>Can cause significant muscle weakness and difficulties with feeding or breathing.</li><li>Children may need complex, ongoing multidisciplinary care.</li></ul></div><div class="info"><h3>SMA Type 2</h3><ul><li>Often begins later in infancy or early childhood.</li><li>Weakness can affect sitting, movement and daily activities.</li><li>Respiratory, orthopedic and rehabilitation support may be needed.</li></ul></div><div class="info"><h3>Treatment & support</h3><p class="muted">Families may face substantial costs for prescribed disease-modifying treatment, hospital care, respiratory equipment, nutrition, physiotherapy and other supportive services.</p><p class="small">Treatment decisions must come from the child's medical team.</p></div></div></div></section>
+
+<section id="how"><div class="container"><div class="section-head"><div><div class="eyebrow">Simple & transparent</div><h2>How support works</h2></div></div><div class="steps"><div class="step"><div class="num">1</div><h3>Meet a child</h3><p class="small">Read a family-approved story and see the fundraising goal.</p></div><div class="step"><div class="num">2</div><h3>Check verification</h3><p class="small">Review identity, medical and guardian verification information provided by the organizers.</p></div><div class="step"><div class="num">3</div><h3>Transfer safely</h3><p class="small">Use the parent/guardian's verified transfer details shown on the profile.</p></div><div class="step"><div class="num">4</div><h3>Follow updates</h3><p class="small">Families can post treatment and fundraising updates for supporters.</p></div></div></div></section>
+
+
+<section id="request"><div class="container">
+<div class="section-head"><div><div class="eyebrow">For parents & legal guardians</div><h2>Request Help for a Child</h2><div class="muted">Submit the child's fundraising application. It will remain private while the organizing team verifies the information.</div></div></div>
+<div class="info" style="max-width:850px;margin:auto">
+<form id="helpForm" onsubmit="submitHelp(event)">
+<div class="detail-grid">
+<div><label>Child's full name *</label><input required name="child" placeholder="Full name"></div>
+<div><label>Child's age *</label><input required name="age" placeholder="e.g. 14 months"></div>
+<div><label>SMA type *</label><select required name="type"><option value="">Select</option><option>SMA Type 1</option><option>SMA Type 2</option></select></div>
+<div><label>Parent/guardian full name *</label><input required name="parent" placeholder="Full name"></div>
+<div><label>Phone number *</label><input required name="phone" type="tel" placeholder="+91 ..."></div>
+<div><label>Email / Gmail *</label><input required name="email" type="email" placeholder="name@gmail.com"></div>
+<div><label>City / State *</label><input required name="location" placeholder="City, State"></div>
+<div><label>Treatment / injection *</label><input required name="treatment" placeholder="As prescribed by doctor"></div>
+<div><label>Estimated treatment cost (₹) *</label><input required name="cost" type="number" min="0" placeholder="Amount"></div>
+<div><label>Amount already raised (₹)</label><input name="raised" type="number" min="0" placeholder="0"></div>
+<div style="grid-column:1/-1"><label>Child's story *</label><textarea required name="story" rows="5" placeholder="Briefly explain the child's needs and fundraising purpose"></textarea></div>
+<div><label>Child photo *</label><input required name="photo" type="file" accept="image/*"></div>
+<div><label>Medical/identity documents</label><input name="docs" type="file" multiple accept=".pdf,image/*"></div>
+<div style="grid-column:1/-1"><label>Transfer details</label><textarea name="payment" rows="3" placeholder="Verified parent/guardian bank or UPI details (kept private until approval)"></textarea></div>
+</div>
+<label style="display:flex;gap:9px;align-items:flex-start;margin-top:18px"><input required type="checkbox" style="width:auto"> I am the parent/legal guardian or authorized representative, and I consent to verification and to publication of the approved information and photo.</label>
+<button class="btn primary" type="submit" style="margin-top:18px">Submit for Verification</button>
+<p id="formStatus" class="small" style="margin-top:12px"></p>
+</form>
+</div></div></section>
+
+
+<section id="reports"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Community safety</div><h2>Report a Profile</h2><div class="muted">If something looks suspicious or incorrect, send a report to the organizing team.</div></div></div>
+<div class="info" style="max-width:760px;margin:auto">
+<form id="reportForm" onsubmit="submitReport(event)">
+<div class="detail-grid">
+<div><label>Profile reference / child name *</label><input required name="profile" placeholder="e.g. SMA-123456 or child name"></div>
+<div><label>Your email (optional)</label><input name="reporter" type="email" placeholder="For follow-up"></div>
+<div style="grid-column:1/-1"><label>Reason *</label><select required name="reason"><option value="">Select a reason</option><option>Fake or misleading information</option><option>Suspicious fundraising or payment details</option><option>Incorrect or forged documents</option><option>Impersonation</option><option>Privacy or consent concern</option><option>Other</option></select></div>
+<div style="grid-column:1/-1"><label>Details *</label><textarea required name="details" rows="5" placeholder="Tell the admin team what you noticed."></textarea></div>
+</div>
+<button class="btn primary" type="submit">Submit Report</button>
+<p id="reportStatus" class="small"></p>
+</form></div></div></section>
+
+<section id="admin"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Organizer dashboard concept</div><h2>Admin Verification Workflow</h2><div class="muted">A production admin panel should never publish a child automatically.</div></div></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Application received</h3><p class="small">Store the submission securely as <b>Pending Verification</b>.</p></div>
+<div class="step"><div class="num">2</div><h3>Verify guardian</h3><p class="small">Confirm identity, guardian relationship, consent and contact details.</p></div>
+<div class="step"><div class="num">3</div><h3>Verify medical need</h3><p class="small">Review medical documents and treatment estimate with appropriate authorized reviewers.</p></div>
+<div class="step"><div class="num">4</div><h3>Verify transfer account</h3><p class="small">Confirm the receiving account/UPI belongs to the approved parent or guardian.</p></div>
+<div class="step"><div class="num">5</div><h3>Publish safely</h3><p class="small">Publish only necessary information. Keep sensitive documents and full address private.</p></div>
+<div class="step"><div class="num">6</div><h3>Monitor updates</h3><p class="small">Allow families to update progress and let admins review reports or suspicious activity.</p></div>
+</div>
+<div class="info" style="margin-top:24px"><h3>Reports Queue — Admin Only</h3><div id="reportsQueue" class="small">No reports submitted in this demo.</div></div>
+<div class="notice" style="margin-top:22px">Production requirement: the admin dashboard must use secure authentication and role-based access. Uploaded medical documents, payment details and personal information should not be publicly accessible.</div>
+</div></section>
+
+<section id="transparency"><div class="container"><div class="banner"><div><div class="eyebrow" style="color:#b9b0ff">Protecting children</div><h2>Trust should come before a transfer.</h2><p>Every public profile should require guardian consent and organizer verification. Sensitive documents and full home addresses should stay private unless there is a legitimate reason to disclose them.</p></div><a class="btn primary" href="#children">See profiles</a></div></div></section>
+
+<footer><div class="container foot"><div><strong>♥ Little Strengths</strong><br><span class="small">A concept for SMA family fundraising and support.</span></div><div class="small">Emergency? Please contact the child's family and treating hospital directly.<br>Never rely on this site for medical advice.</div></div></footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalcontent"></div></div></div>
+<script>
+const profiles={
+aarav:{name:"Aarav Sharma",age:"10 months",city:"Hyderabad",type:"SMA Type 1",goal:"₹25,00,000",raised:"₹12,40,000",parent:"Rajesh Sharma (Father)",phone:"+91 9XXXXXXXXX",email:"aarav.family@example.com",upi:"aarav.support@example",treatment:"Prescribed SMA treatment + supportive care",address:"Hyderabad, Telangana (full address shared privately after verification)",story:"Aarav's family is raising funds for his prescribed treatment and ongoing supportive care."},
+ananya:{name:"Ananya Reddy",age:"3 years",city:"Bengaluru",type:"SMA Type 2",goal:"₹8,00,000",raised:"₹4,75,000",parent:"Priya Reddy (Mother)",phone:"+91 8XXXXXXXXX",email:"ananya.family@example.com",upi:"ananya.support@example",treatment:"Prescribed treatment + physiotherapy and respiratory support",address:"Bengaluru, Karnataka (full address shared privately after verification)",story:"Ananya's family is seeking support for treatment and rehabilitation-related expenses."},
+vihaan:{name:"Vihaan Kumar",age:"14 months",city:"Chennai",type:"SMA Type 1",goal:"₹30,00,000",raised:"₹19,20,000",parent:"Suresh Kumar (Father)",phone:"+91 7XXXXXXXXX",email:"vihaan.family@example.com",upi:"vihaan.support@example",treatment:"Prescribed treatment + medical equipment",address:"Chennai, Tamil Nadu (full address shared privately after verification)",story:"Vihaan's family is fundraising for prescribed treatment and essential medical equipment."}
+};
+function openProfile(id){let p=profiles[id];document.getElementById('modalcontent').innerHTML=`<div class="profile"><div class="photo">👶</div><div><div class="badges"><span class="badge">${p.type}</span><span class="badge verified">✓ Guardian & documents verified</span></div><h2>${p.name}</h2><div class="small">${p.age} · ${p.city}</div><p>${p.story}</p></div></div><div class="detail-grid"><div class="detail"><b>Treatment</b><br>${p.treatment}</div><div class="detail"><b>Treatment goal</b><br>${p.goal}</div><div class="detail"><b>Raised</b><br>${p.raised}</div><div class="detail"><b>Parent/Guardian</b><br>${p.parent}</div><div class="detail"><b>Phone</b><br>${p.phone}</div><div class="detail"><b>Email</b><br>${p.email}</div><div class="detail" style="grid-column:1/-1"><b>Address</b><br>${p.address}</div></div><div class="transfer"><h3>Transfer to the verified parent/guardian</h3><p><b>UPI ID:</b> ${p.upi}</p><p><b>Account holder:</b> ${p.parent}</p><p class="small">For a production website, connect this section to verified bank/UPI details rather than using sample information.</p><button class="btn primary" onclick="alert('Demo only: no real payment is processed.')">Transfer Funds — Demo</button><button class="btn secondary" style="margin-left:8px" onclick="openReport('${id}')">🚩 Report Profile</button></div><div class="notice">⚠️ Demo profile: all names, contact details and transfer information above are placeholders. Do not send money using this prototype. A real launch should verify identity, guardian consent, medical documents and payment details.</div>`;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+
+function submitHelp(e){
+ e.preventDefault();
+ const form=e.target;
+ const data=Object.fromEntries(new FormData(form).entries());
+ const id='SMA-'+Math.floor(100000+Math.random()*900000);
+ document.getElementById('formStatus').innerHTML=`<b>Application submitted.</b> Reference: <b>${id}</b><br>Status: <b>Pending Verification</b>. In a production version, the organizer would securely review the documents and contact the parent/guardian.`;
+ form.reset();
+}
+
+let demoReports=[];
+function openReport(profile){
+ closeModal();
+ document.getElementById('reportForm').profile.value=profile;
+ document.getElementById('reports').scrollIntoView({behavior:'smooth'});
+}
+function submitReport(e){
+ e.preventDefault();
+ const data=Object.fromEntries(new FormData(e.target).entries());
+ const id='REP-'+Math.floor(100000+Math.random()*900000);
+ demoReports.unshift({id,...data,status:'Open'});
+ document.getElementById('reportStatus').innerHTML=`<b>Report submitted.</b> Reference: <b>${id}</b>.`;
+ e.target.reset();
+ renderReports();
+}
+function renderReports(){
+ const el=document.getElementById('reportsQueue');
+ if(!demoReports.length){el.textContent='No reports submitted in this demo.';return}
+ el.innerHTML=demoReports.map(r=>`<div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin:10px 0;background:#fff"><b>${r.id}</b> · ${r.status}<br><b>Profile:</b> ${r.profile}<br><b>Reason:</b> ${r.reason}<br>${r.details}<br><button class="btn secondary" style="margin-top:8px" onclick="markReport('${r.id}','Reviewed')">Mark Reviewed</button> <button class="btn" style="margin-top:8px;background:#fee4e2;color:#b42318" onclick="markReport('${r.id}','Profile Hidden')">Hide Profile</button></div>`).join('');
+}
+function markReport(id,status){
+ const r=demoReports.find(x=>x.id===id); if(r){r.status=status;renderReports();}
+}
+</script>
+</body>
+</html>
